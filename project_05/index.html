@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element By id</title>
+    <style>
+        body{
+            background-color: black;
+        }
+       div{
+        margin: auto;
+       width: 50%;
+       padding: 10px;
+    }
+    </style>
+</head>
+<body>
+   <div>
+    <img id="image" src="image/bulboff.png" alt="bulb" height="300px">
+    <button id="bulb">Trun On</button>
+   </div>
+   <script>
+    let btn=document.getElementById("bulb")
+    let img=document.getElementById("image")
+    btn.addEventListener('click',abc)
+    function abc(e){
+        if(btn.textContent.includes('On')){
+            image.src="image/bulbon.jpg"
+            btn.textContent="Trun off"
+        }
+        else{
+            image.src="image/bulboff.png"
+            btn.textContent="Trun On"
+        }
+    }
+   </script>
+</body>
+</html>

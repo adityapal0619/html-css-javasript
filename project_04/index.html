@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+
+<ul id="ads">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right"><a class="active" href="#about">About</a></li>
+</ul>
+<div style="display: flex;justify-content: center; margin-top: 45px;">
+    <iframe  width="560" height="315" src="https://www.youtube.com/embed/jTqmVQTu0TI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div style="margin-top: 29px;" class="text-center ">
+    <button id="darkmode" class="btn btn-primary btn-lg">Dark mode</button>
+
+</div>
+<script>
+    const dark=document.getElementById('darkmode')
+    let a=document.getElementById('ads')
+    dark.addEventListener('click',ondark)
+    function ondark(e){
+        if(dark.textContent.includes('Dark')){
+            document.body.style.backgroundColor = "black"
+            a.style.background="red"
+            darkmode.textContent="Light Mode";
+        }
+        else{
+            document.body.style.backgroundColor="white"
+            a.style.backgroundColor="black"
+           
+            darkmode.textContent="Dark Mode";
+        }
+    }
+</script>
+</body>
+</html>
+
+
